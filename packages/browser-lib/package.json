@@ -8,6 +8,12 @@
         "./*": "./dist/*.js"
     },
     "scripts": {
-        "build": "tsc"
+        "build": "tsc && cpy 'src/**/*.css' dist"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.27"
     }
 }

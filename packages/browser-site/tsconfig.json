@@ -1,8 +1,7 @@
 {
+  "extends": "../../tsconfig.json",
   "include": ["src"],
-  "compilerOptions": {
-      "moduleResolution": "Node16",
-      
+  "compilerOptions": {      
       "noEmit": true
   },
 }

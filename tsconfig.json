@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+      // Makes tsc respect "exports" directives in package.json
+      "moduleResolution": "Node16",
+
+      // Makes tsc generate ESM syntax outputs
+      "target": "es2022",
+
+      // Generate .d.ts files for downstream consumers
+      "declaration": true, 
+
+      // Allow JSX syntax in ts files
+      "jsx": "react",
+
+      "plugins": [{ "name": "typescript-plugin-css-modules" }]
+  }
+}
