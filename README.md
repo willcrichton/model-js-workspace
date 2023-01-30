@@ -1,6 +1,10 @@
 # Model Javascript workspace
 
-This repository provides an example of how to setup a JS workspace using the latest JS technologies and design patterns. Its design reflects my experience with what works best for structuring a JS project. Some notable aspects of the design:
+This repository provides an example that embodies my standard for how to setup a JS workspace. The goal is to envision a "JS workspace of the future": I want a stack of libraries, scripts, and websites that contain minimal boilerplate and are interoperable. That goal starts by throwing away old standards and tools: no CommonJS, no Webpack, no jQuery, and so on.
+
+This current design reflects my experience on what works best for structuring a JS project. My recent JS experience comes from big projects like [Nota] and lots of smaller ones like [mdbook-quiz], [Aquascope], and [Flowistry].
+
+Some notable aspects of the design:
 
 * **Static typing:** all source files are written in [Typescript]. Static types are good, what else is there to say? And the JS community has coalesced around Typescript, so that's what I use.
 * **Package management:** [pnpm] is the package manager and workspace executor. Its interface is similar to npm, but its nested/symlinked node_modules structure is a lot more sane. It helps catch errors where package A can use package B without listing B as a dependency (because B is a transitive dependency of a listed dependency C). It also reduces the disk usage of node_modules directories.
@@ -32,3 +36,7 @@ The long-term goal for this workspace is to provide a gold standard for the kind
 [esbuild-jest]: https://github.com/aelbore/esbuild-jest
 [jest-hack]: https://twitter.com/wcrichton/status/1525655175335014400
 [Graco]: https://github.com/willcrichton/graco/
+[Nota]: https://github.com/nota-lang/nota
+[Aquascope]: https://github.com/cognitive-engineering-lab/aquascope
+[mdbook-quiz]: https://github.com/cognitive-engineering-lab/mdbook-quiz
+[Flowistry]: https://github.com/willcrichton/flowistry
