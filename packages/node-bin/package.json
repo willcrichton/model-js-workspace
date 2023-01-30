@@ -1,0 +1,14 @@
+{
+  "name": "node-bin",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+      "./dist/main.js": "node-bin"
+  },
+  "scripts": {
+      "build": "node build.mjs"
+  },
+  "devDependencies": {
+      "node-lib": "workspace:^0.1.0"
+  }
+}
