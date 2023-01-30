@@ -12,6 +12,8 @@
       // Allow JSX syntax in ts files
       "jsx": "react",
 
-      "plugins": [{ "name": "typescript-plugin-css-modules" }]
+      // Allow ts-jest to import files from dist/ directory
+      "esModuleInterop": true,
+      "allowJs": true,
   }
 }
