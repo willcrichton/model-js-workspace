@@ -1,0 +1,13 @@
+{
+    "name": "browser-lib",
+    "version": "0.1.0",
+    "main": "dist/lib.js",
+    "type": "module",
+    "exports": {
+        ".": "./dist/lib.js",
+        "./*": "./dist/*.js"
+    },
+    "scripts": {
+        "build": "tsc"
+    }
+}

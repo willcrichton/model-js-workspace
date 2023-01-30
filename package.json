@@ -1,0 +1,8 @@
+{
+    "private": true,
+    "devDependencies": {
+        "esbuild": "^0.17.5",
+        "typescript": "^4.9.4",
+        "vite": "^4.0.4"
+    }
+}

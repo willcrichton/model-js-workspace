@@ -1,0 +1,12 @@
+{
+    "name": "browser-script",
+    "version": "0.1.0",
+    "type": "module",
+    "main": "dist/lib.js",
+    "scripts": {
+        "build": "tsc && node build.mjs"
+    },
+    "devDependencies": {
+        "browser-lib": "workspace:^0.1.0"
+    }
+}

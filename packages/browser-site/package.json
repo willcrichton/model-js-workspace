@@ -1,0 +1,11 @@
+{
+    "name": "browser-site",
+    "type": "module",
+    "scripts": {
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "browser-lib": "workspace:^0.1.0",
+        "browser-script": "workspace:^0.1.0"
+    }
+  }
