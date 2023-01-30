@@ -8,7 +8,7 @@
         "./*": "./dist/*.js"
     },
     "scripts": {
-        "build": "tsc && cpy 'src/**/*.scss' dist"
+        "build": "tsc && cpy 'src/**/*.{scss,jpg}' dist"
     },
     "peerDependencies": {
         "react": "^18.2.0"
