@@ -2,6 +2,9 @@
   "name": "node-lib",
   "version": "0.1.0",
   "main": "dist/lib.js",
+  "typedoc": {
+      "entryPoint": "src/lib.ts"
+  },
   "type": "module",
   "exports": {
       ".": "./dist/lib.js",

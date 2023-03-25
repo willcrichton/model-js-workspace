@@ -16,8 +16,7 @@ Some notable aspects of the design:
     * **Static assets:** the principle here is for libraries to use the same convention as the downstream bundler (currently [Vite]). So a library that needs an image imports the file with the path `icon.jpg?file`, and Vite is responsible for bundling the image. The library builder just needs to copy the image from the source directory to the appropriate place in the destination. A similar principle applies for CSS.
     * **Tests:** I use [Jest] with the [ts-jest] adapter. I've other Jest integrations like [esbuild-jest], but they are full of [horrendous hacks][jest-hack]. My kingdom for a way to write JS tests that isn't garbage.
 * **Scripts:** for scripts, i.e. top-level entry points to JS either for Node or the browser, I use [esbuild] to bundle the source files into a single JS file that can be run as a Node executable, or provided to a `<script>` tag in the browser.
-
-Note that this workspace omits some aspects like [formatting](https://prettier.io/), [linting](https://eslint.org/), and [documentation generation](https://typedoc.org/) that don't influence the structure of the repository.
+* **Linting, formatting, documentation generation:** I use [eslint], [prettier], and [typedoc] to do each, respectively.
 
 The long-term goal for this workspace is to provide a gold standard for the kind of repo that [Graco] can automatically generate. 
 
@@ -40,3 +39,6 @@ The long-term goal for this workspace is to provide a gold standard for the kind
 [Aquascope]: https://github.com/cognitive-engineering-lab/aquascope
 [mdbook-quiz]: https://github.com/cognitive-engineering-lab/mdbook-quiz
 [Flowistry]: https://github.com/willcrichton/flowistry
+[eslint]: https://eslint.org/
+[prettier]: https://prettier.io/
+[typedoc]: https://typedoc.org/

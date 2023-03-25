@@ -1,0 +1,8 @@
+{
+  "entryPointStrategy": "packages",
+  "name": "model-js-workspace",
+  "validation": {
+    "invalidLink": true,
+    "notExported": true
+  }
+}

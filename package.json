@@ -6,7 +6,8 @@
         "test": "jest",
         "fmt": "prettier -w \"packages/*/src/**/*.{ts,tsx}\"",
         "lint": "pnpm -r lint",
-        "clean": "rm -rf dist node_modules packages/*/{dist,node_modules}"
+        "clean": "rm -rf dist node_modules packages/*/{dist,node_modules}",
+        "doc": "typedoc packages/browser-lib packages/node-lib"
     },
     "devDependencies": {
         "@trivago/prettier-plugin-sort-imports": "^4.1.1",
@@ -26,6 +27,7 @@
         "prettier": "^2.8.7",
         "sass": "^1.60.0",
         "ts-jest": "^29.0.5",
+        "typedoc": "^0.23.28",
         "typescript": "^5.0.2",
         "typescript-plugin-css-modules": "^5.0.0",
         "vite": "^4.2.1"
