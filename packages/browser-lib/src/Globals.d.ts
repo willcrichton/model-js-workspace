@@ -4,6 +4,6 @@ declare module "*?file" {
 }
 
 declare module "*.module.css" {
-  const classes: {[cls: string]: string};
+  const classes: { [cls: string]: string };
   export default classes;
 }

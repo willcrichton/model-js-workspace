@@ -8,12 +8,14 @@
         "./*": "./dist/*.js"
     },
     "scripts": {
-        "build": "tsc && cpy 'src/**/*.{scss,jpg}' dist"
+        "build": "tsc && cpy 'src/**/*.{scss,jpg}' dist",
+        "lint": "eslint --ext ts,tsx src"
     },
     "peerDependencies": {
         "react": "^18.2.0"
     },
     "devDependencies": {
+        "react": "^18.2.0",
         "@types/react": "^18.0.27"
     }
 }

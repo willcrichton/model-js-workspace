@@ -4,7 +4,8 @@
     "type": "module",
     "main": "dist/lib.js",
     "scripts": {
-        "build": "tsc && node build.mjs"
+        "build": "tsc && node build.mjs",
+        "lint": "eslint --ext ts,tsx src"
     },
     "devDependencies": {
         "browser-lib": "workspace:^0.1.0"

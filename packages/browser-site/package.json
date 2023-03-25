@@ -2,7 +2,8 @@
     "name": "browser-site",
     "type": "module",
     "scripts": {
-        "build": "vite build"
+        "build": "vite build",
+        "lint": "eslint --ext ts,tsx src"
     },
     "devDependencies": {
         "@types/react": "^18.0.27",

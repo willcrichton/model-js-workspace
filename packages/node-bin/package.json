@@ -6,7 +6,8 @@
       "./dist/main.js": "node-bin"
   },
   "scripts": {
-      "build": "node build.mjs"
+      "build": "node build.mjs",
+      "lint": "eslint --ext ts,tsx src"
   },
   "devDependencies": {
       "node-lib": "workspace:^0.1.0"

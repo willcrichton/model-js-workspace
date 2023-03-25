@@ -15,5 +15,5 @@
       // Allow ts-jest to import files from dist/ directory
       "esModuleInterop": true,
       "allowJs": true,
-  }
+  },
 }

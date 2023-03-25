@@ -1,3 +1,3 @@
-import {cwd} from "node-lib";
+import { cwd } from "node-lib";
 
 console.log(cwd());
