@@ -1,6 +1,6 @@
 import React from "react";
 
-import classes from "./button.module.css";
+import classes from "./button.module.scss";
 import icon from "./icon.jpg?file";
 
 /** A very special button */

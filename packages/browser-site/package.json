@@ -3,6 +3,7 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
+        "watch": "vite dev",
         "lint": "eslint --ext ts,tsx src"
     },
     "devDependencies": {

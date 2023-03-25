@@ -3,7 +3,7 @@ declare module "*?file" {
   export default url;
 }
 
-declare module "*.module.css" {
+declare module "*.module.scss" {
   const classes: { [cls: string]: string };
   export default classes;
 }

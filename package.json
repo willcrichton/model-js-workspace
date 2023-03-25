@@ -5,7 +5,8 @@
         "watch": "pnpm run -r --parallel --no-bail build -w",
         "test": "jest",
         "fmt": "prettier -w \"packages/*/src/**/*.{ts,tsx}\"",
-        "lint": "pnpm -r lint"
+        "lint": "pnpm -r lint",
+        "clean": "rm -rf dist node_modules packages/*/{dist,node_modules}"
     },
     "devDependencies": {
         "@trivago/prettier-plugin-sort-imports": "^4.1.1",
