@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
       // Makes tsc respect "exports" directives in package.json
-      "moduleResolution": "Node16",
+      "moduleResolution": "bundler",
 
       // Makes tsc generate ESM syntax outputs
       "target": "es2022",
