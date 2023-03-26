@@ -1,5 +1,6 @@
 {
   "entryPointStrategy": "packages",
+  "entryPoints": ["packages/browser-lib", "packages/node-lib"],
   "name": "model-js-workspace",
   "validation": {
     "invalidLink": true,
