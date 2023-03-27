@@ -12,13 +12,10 @@
     },
     "scripts": {
         "build": "tsc && cpy 'src/**/*.{scss,jpg}' dist",
-        "lint": "eslint --ext ts,tsx src"
+        "lint": "eslint --ext ts,tsx src",
+        "test": "vitest run"
     },
     "peerDependencies": {
-        "react": "^18.2.0"
-    },
-    "devDependencies": {
-        "@types/react": "^18.0.27",
         "react": "^18.2.0"
     },
     "dependencies": {

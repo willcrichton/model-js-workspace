@@ -9,12 +9,12 @@ Some notable aspects of the design:
 * **Static typing:** all source files are written in [Typescript]. Static types are good, what else is there to say? And the JS community has coalesced around Typescript, so that's what I use.
 * **Package management:** [pnpm] is the package manager and workspace executor. Its interface is similar to npm, but its nested/symlinked node_modules structure is a lot more sane. It helps catch errors where package A can use package B without listing B as a dependency (because B is a transitive dependency of a listed dependency C). It also reduces the disk usage of node_modules directories.
 * **Websites:** the main principle for websites is to provide as little configuration as possible, and specify everything within the TS source files. I use [Vite] for bundling since it provides a number of nice conventions for this purpose, e.g. adding `?url` to an import path to bundle a file and get a URL to it.
-    * **UI framework:** I use [React] as  UI framework, and sometimes [mobx] for complex data structures. React's super stable and there's a lot of libraries that integrate with it. It's easy to write modular React components. I've also heard good things about [Svelte] but haven't tried it yet.
+    * **UI framework:** I use [React] as a UI framework, and sometimes [mobx] for complex data structures. React's super stable and there's a lot of libraries that integrate with it. It's easy to write modular React components. I've also heard good things about [Svelte] but haven't tried it yet.
     * **CSS:** I use [Sass] to write CSS, mostly for nesting rules and mixins. I used to use Sass variables, but these days I use [CSS variables] instead. I'm starting to use [CSS modules] to keep the CSS rules close to the components they describe.
 * **Libraries:** the main principle for libraries is to do as little processing of the source as possible. A library should leave bundling to downstream applications, instead providing unminified & fully-documented files to support the IDE experience and debugging. Therefore my libraries simply use `tsc` to transpile each file individually into a directory-structure-equivalent output, with corresponding adjacent `.d.ts` files.
     * **Import paths:** with careful use of the `exports` field of `package.json`, this strategy enables nested imports. For example, if a file is at `browser-lib/src/components/button.ts`, this gets transpiled to `browser-lib/dist/components/button.js`. A re-export rule then allows downstream consumers to import `browser-lib/components/button`.
     * **Static assets:** the principle here is for libraries to use the same convention as the downstream bundler (currently [Vite]). So a library that needs an image imports the file with the path `icon.jpg?file`, and Vite is responsible for bundling the image. The library builder just needs to copy the image from the source directory to the appropriate place in the destination. A similar principle applies for CSS.
-    * **Tests:** I use [Jest] with the [ts-jest] adapter. I've other Jest integrations like [esbuild-jest], but they are full of [horrendous hacks][jest-hack]. My kingdom for a way to write JS tests that isn't garbage.
+    * **Tests:** I use [vitest], which integrates well with Vite. I recently switched from [Jest], which has fragile support for both Typescript and ESM, while both are first-class in vitest. For frontend testing, I use [JSDom] and [testing-library]. Fingers crossed that vitest actually works well!
 * **Scripts:** for scripts, i.e. top-level entry points to JS either for Node or the browser, I use [esbuild] to bundle the source files into a single JS file that can be run as a Node executable, or provided to a `<script>` tag in the browser.
 * **Linting, formatting, documentation generation:** I use [eslint], [prettier], and [typedoc] to do each, respectively.
 
@@ -42,3 +42,6 @@ The long-term goal for this workspace is to provide a gold standard for the kind
 [eslint]: https://eslint.org/
 [prettier]: https://prettier.io/
 [typedoc]: https://typedoc.org/
+[vitest]: https://vitest.dev/
+[JSDom]: https://github.com/jsdom/jsdom
+[testing-library]: https://github.com/jsdom/jsdom

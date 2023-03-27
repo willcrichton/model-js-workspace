@@ -5,7 +5,8 @@
     "main": "dist/lib.js",
     "scripts": {
         "build": "tsc && node build.mjs",
-        "lint": "eslint --ext ts,tsx src"
+        "lint": "eslint --ext ts,tsx src",
+        "test": "vitest run"
     },
     "devDependencies": {
         "browser-lib": "workspace:^0.1.0"
