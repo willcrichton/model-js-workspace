@@ -7,7 +7,8 @@
         "fmt": "prettier -w \"packages/*/src/**/*.{ts,tsx}\"",
         "lint": "pnpm -r lint",
         "clean": "rm -rf dist node_modules packages/*/{dist,node_modules}",
-        "doc": "typedoc"
+        "doc": "typedoc",
+        "commit-check": "pnpm clean && pnpm install && pnpm build && pnpm lint && pnpm test"
     },
     "devDependencies": {
         "@testing-library/react": "^14.0.0",
