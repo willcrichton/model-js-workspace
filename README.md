@@ -6,7 +6,7 @@ This current design reflects my experience on what works best for structuring a 
 
 Some notable aspects of the design:
 
-* **Static typing:** all source files are written in [Typescript]. Static types are good, what else is there to say? And the JS community has coalesced around Typescript, so that's what I use.
+* **Static typing:** all source files are written in [Typescript]. Static types are good, what else is there to say? And the JS community has coalesced around Typescript, so that's what I use. The annoying part with Typescript is that if you're writing a CLI script (build script, test, etc.) then it has to be transpiled before being executed by Node. I've had trouble get [ts-node] to work with ESM, but in theory that would solve the issue.
 * **Package management:** [pnpm] is the package manager and workspace executor. Its interface is similar to npm, but its nested/symlinked node_modules structure is a lot more sane. It helps catch errors where package A can use package B without listing B as a dependency (because B is a transitive dependency of a listed dependency C). It also reduces the disk usage of node_modules directories.
 * **Websites:** the main principle for websites is to provide as little configuration as possible, and specify everything within the TS source files. I use [Vite] for bundling since it provides a number of nice conventions for this purpose, e.g. adding `?url` to an import path to bundle a file and get a URL to it.
     * **UI framework:** I use [React] as a UI framework, and sometimes [mobx] for complex data structures. React's super stable and there's a lot of libraries that integrate with it. It's easy to write modular React components. I've also heard good things about [Svelte] but haven't tried it yet.
@@ -45,3 +45,4 @@ The long-term goal for this workspace is to provide a gold standard for the kind
 [vitest]: https://vitest.dev/
 [JSDom]: https://github.com/jsdom/jsdom
 [testing-library]: https://github.com/jsdom/jsdom
+[ts-node]: https://typestrong.org/ts-node/
