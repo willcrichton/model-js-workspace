@@ -13,7 +13,6 @@ importers:
       '@typescript-eslint/parser': ^5.56.0
       '@vitejs/plugin-react': ^3.1.0
       cpy-cli: ^4.2.0
-      esbuild: ^0.17.13
       eslint: ^8.36.0
       eslint-plugin-prettier: ^4.2.1
       eslint-plugin-react: ^7.32.2
@@ -38,7 +37,6 @@ importers:
       '@typescript-eslint/parser': 5.56.0_j4766f7ecgqbon3u7zlxn5zszu
       '@vitejs/plugin-react': 3.1.0_vite@4.2.1
       cpy-cli: 4.2.0
-      esbuild: 0.17.13
       eslint: 8.36.0
       eslint-plugin-prettier: 4.2.1_46eickiazn37rcnqccwnhqcaki
       eslint-plugin-react: 7.32.2_eslint@8.36.0
