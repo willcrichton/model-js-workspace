@@ -4,7 +4,6 @@ importers:
 
   .:
     specifiers:
-      '@testing-library/react': ^14.0.0
       '@trivago/prettier-plugin-sort-imports': ^4.1.1
       '@types/node': ^18.15.10
       '@types/react': ^18.0.29
@@ -19,8 +18,6 @@ importers:
       eslint-plugin-react-hooks: ^4.6.0
       jsdom: ^21.1.1
       prettier: ^2.8.7
-      react: ^18.2.0
-      react-dom: ^18.2.0
       sass: ^1.60.0
       typedoc: ^0.23.28
       typescript: ^5.0.2
@@ -28,7 +25,6 @@ importers:
       vite: ^4.2.1
       vitest: ^0.29.7
     devDependencies:
-      '@testing-library/react': 14.0.0_biqbaboplfbrettd7655fr4n2y
       '@trivago/prettier-plugin-sort-imports': 4.1.1_prettier@2.8.7
       '@types/node': 18.15.10
       '@types/react': 18.0.29
@@ -43,8 +39,6 @@ importers:
       eslint-plugin-react-hooks: 4.6.0_eslint@8.36.0
       jsdom: 21.1.1
       prettier: 2.8.7
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
       sass: 1.60.0
       typedoc: 0.23.28_typescript@5.0.2
       typescript: 5.0.2
@@ -54,32 +48,47 @@ importers:
 
   packages/browser-lib:
     specifiers:
+      '@testing-library/react': ^14.0.0
       codemirror: ^6.0.1
+      react: ^18.2.0
+      react-dom: ^18.2.0
     dependencies:
       codemirror: 6.0.1
+    devDependencies:
+      '@testing-library/react': 14.0.0_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
 
   packages/browser-script:
     specifiers:
       browser-lib: workspace:^0.1.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
     devDependencies:
       browser-lib: link:../browser-lib
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
 
   packages/browser-site:
     specifiers:
       browser-lib: workspace:^0.1.0
       browser-script: workspace:^0.1.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
     devDependencies:
       browser-lib: link:../browser-lib
       browser-script: link:../browser-script
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
 
-  packages/node-bin:
+  packages/node-lib:
+    specifiers: {}
+
+  packages/node-script:
     specifiers:
       node-lib: workspace:^0.1.0
     devDependencies:
       node-lib: link:../node-lib
-
-  packages/node-lib:
-    specifiers: {}
 
 packages:
 

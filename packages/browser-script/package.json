@@ -9,6 +9,8 @@
         "test": "vitest run"
     },
     "devDependencies": {
-        "browser-lib": "workspace:^0.1.0"
+        "browser-lib": "workspace:^0.1.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
     }
 }

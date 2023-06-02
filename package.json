@@ -11,7 +11,6 @@
         "commit-check": "pnpm clean && pnpm install && pnpm build && pnpm lint && pnpm test"
     },
     "devDependencies": {
-        "@testing-library/react": "^14.0.0",
         "@trivago/prettier-plugin-sort-imports": "^4.1.1",
         "@types/node": "^18.15.10",
         "@types/react": "^18.0.29",
@@ -26,8 +25,6 @@
         "eslint-plugin-react-hooks": "^4.6.0",
         "jsdom": "^21.1.1",
         "prettier": "^2.8.7",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
         "sass": "^1.60.0",
         "typedoc": "^0.23.28",
         "typescript": "^5.0.2",
