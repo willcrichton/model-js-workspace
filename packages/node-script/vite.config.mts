@@ -9,10 +9,13 @@ export default defineConfig({
             entry: resolve(__dirname, "src/main.ts"),
             fileName: "main",
             formats: ["cjs"],
-        },
+        },        
         rollupOptions: {
             external: builtinModules
         },
         minify: false,
+    },
+    resolve: {
+        conditions: ["node"]
     },
 });
